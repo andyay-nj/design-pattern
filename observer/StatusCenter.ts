@@ -1,6 +1,6 @@
 import { Generator } from './Generator';
 
-export class StringGenerator extends Generator {
+export class StatusCenter extends Generator {
     
     in = new BufferedReader(new InputStreamReader(System.in));
     
