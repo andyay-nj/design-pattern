@@ -40,10 +40,16 @@ export class MakeBurger {
     bulgogi_shrimp_burger = new Shrimp(this.bulgogi_burger).add_ingredient();
     
     public main(): void {
-        console.log('1',this.bread); //기본빵
-        console.log('2',this.bulgogi_burger); //기본빵+불고기패티
-        console.log('3',this.shrimp_burger); //기본빵+새우패티
-        console.log('4',this.bulgogi_shrimp_burger); //기본빵+불고기패티+새우패티
+        console.log('1',this.bread);
+        console.log('2',this.bulgogi_burger);
+        console.log('3',this.shrimp_burger);
+        console.log('4',this.bulgogi_shrimp_burger);
+        /**
+         * 1 '기본빵'
+         * 2 '기본빵+불고기패티'
+         * 3 '기본빵+새우패티'
+         * 4 '기본빵+불고기패티+새우패티'
+         */
     }
 }
 
