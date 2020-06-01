@@ -1,5 +1,5 @@
 /*-------------- 구두 추상 클래스 ---------------*/
-abstract class Shoes {
+class Shoes {
     name: string;
     bottom: string;
     leather: string;
