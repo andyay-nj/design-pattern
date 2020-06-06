@@ -1,39 +1,4 @@
 interface PaymentPolicy {
-    pay(customer: string): void;
-}
-
-class Customer {
-    changePayment(customer: string, payment: PaymentPolicy): void {
-        payment.pay(customer);
-    }
-}
-
-export class Card implements PaymentPolicy {
-    pay(customer: string): void {
-        console.log(`${customer} 💳카드긁기`);
-    }
-}
-
-export class Cash implements PaymentPolicy {
-    pay(customer: string): void {
-        console.log(`${customer} 💵현금내기`);
-    }
-}
-
-export class Main {
-    customer = new Customer();
-    // card = new Card();
-    // cash = new Cash();
-
-    main(customer: string, payment: PaymentPolicy): void {
-        this.customer.changePayment(customer, payment);
-    }
-}
-
-//basic
-/**
-
-interface PaymentPolicy {
     pay(): void;
 }
 
@@ -66,5 +31,3 @@ export class Main {
         this.customer.changePayment(this.cash);
     }
 }
-
- */
