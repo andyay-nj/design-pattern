@@ -37,7 +37,6 @@ abstract class ShoesStore {
 class KoreaShoesStore extends ShoesStore {
     
     makeShoes(name: string): Shoes {
-        // TODO Auto-generated method stub
         if (name === "blackShoes") {
             return new KRStyleBlackShoes() 
         } else if (name === "brownShoes") {
@@ -53,8 +52,6 @@ class KoreaShoesStore extends ShoesStore {
 class GermanyShoesStore extends ShoesStore {
      
     makeShoes(name: string): Shoes {
-        // TODO Auto-generated method stub
- 
         if (name === "blackShoes") {
             return new DEStyleBlackShoes();
         } else if (name === "brownShoes") {
