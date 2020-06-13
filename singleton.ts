@@ -1,15 +1,26 @@
-class Printer {
-    private static Printer printer = new Printer();
-    private static int count = 0;
+class Singleton {
+    private static instance: Singleton;
 
-    private Printer() {}
+    private constructor() { }
 
-    public static Printer getInstance() {
-        return printer;
-    }
+    public static getInstance(): Singleton {
+        if (!Singleton.instance) {
+            Singleton.instance = new Singleton();
+        }
 
-    public synchronized static void print(String input) {
-        count++;
-        System.out.println(input + "count : "+ count);
+        return Singleton.instance;
     }
 }
+
+function clientCode() {
+    const s1 = Singleton.getInstance();
+    const s2 = Singleton.getInstance();
+
+    if (s1 === s2) {
+        console.log('Singleton works, both variables contain the same instance.');
+    } else {
+        console.log('Singleton failed, variables contain different instances.');
+    }
+}
+
+clientCode();
